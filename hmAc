@@ -1,14 +1,19 @@
 1.Portok felkapcsolasa
 2 Eszkozok elnevezese
 3.Routerben jelszo allitas
-enable password ...
+enable password Carlo-1625
   service password-encryption
   line console 0
-  password ...
+  password Stilfer-1620
   do wr
 
 4. switchen jelszo es vlanok elnevezese
 jelszok ugyanugy 
+enable password Dogani-1625
+  service password-encryption
+  line console 0
+  password Johan-1620
+  do wr
 vlan 10
   name ADMIN
   vlan 20
