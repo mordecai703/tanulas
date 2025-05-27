@@ -1,1 +1,24 @@
-blabla
+Cisco A feladat
+B csak kepekben van meg.
+De Az A is kivan fotozva
+.
+1.Lepes felkapcsolni a lekapcsolt portokat
+2. Lepes routerek es switchek at nevezese
+3.jelszok beallitasa routeren es switchen
+4.vlanok  atablazat alapjan
+5.amelyik routeren dolgozunk  bekapcsoljuk  majd beirjuk az ipv6 cimeket
+adot1q es unicast routingot es az ipv6 cimet
+6.beirjuk a serialokat
+7.vlanok megadasa a routeren
+8.visszabmegyunk a switchbe es akpcsolo interfeszeknek megadjuk a vlant es rangel egyutt.
+9.vissza a routerbe majd megadjuk a versiont  es s stanby ipt
+10. Ip route jon a routerben wan kapcsolatot is megadjuk
+11. A virtualis allapotokat passzivba vagy amibe keri abba rakjuk
+12. Default information originatet adjuk meg 
+13 belso vagy amit ir kulso belso kulsot megadjuk
+Utana cimforditas
+Source static jon
+14. Aclek jonnek deny es a forditott maszkja wildcardja
+15. Overlod az utolso
+Show run 
+Show vlan brief
