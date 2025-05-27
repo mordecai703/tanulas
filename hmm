@@ -1,0 +1,54 @@
+1. Gmail fiok
+2.mega letehozunk 
+3.Paas platdorm as a service 
+
+Aws bekapcsolassal kezdjuk mert sokaig tolt.
+Aws modules 
+Launch aws academy learner lab vagy cloud foundutaiont de inkabb learner labot.
+Es startoljuk 
+
+1. Vpc
+Publik es private
+Subnet
+Route tables abra a publikus az internet gatewayhez csatlakoztatjuk
+Internet gatewwys
+Jobb klikk attach to vpc
+Elastic ip
+Nat gateway
+Security group sshat engedelyezem csak
+Puttyon belul auth es credentials
+Private key 
+Session a hostname az ex2nel a piblikus ipjet kell beirni
+Kepek
+
+
+
+
+
+Ec2
+Launch instance
+Elnevezzuk
+Kivalasztjuk 
+A free tiert
+Instance
+Create a new kaypair ppk!!
+Nevet megadjuk
+Network settings
+Kivalasztjuk  a vpct
+Subnet ennel publikusat megadjuk
+Auto assign 
+Select existing security group
+
+
+
+
+++ info
+Internet gatewaysnel jobb klikk
+Route tables jobb klikk kitudom valasztani mire legyen hatasa
+Edit subnet assecitons edit routes es ott. 
+
+Inbound rules
+Security groups anywhere ssh 
+Leiras adni kell neki.
+Sent
+Write to
