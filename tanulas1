@@ -1,0 +1,138 @@
+Meretezett vissza allitas
+1.Jobb cntrl +c es vissza all
+Ctrl +deljobb control
+
+
+1.tartomany vezerlo beallitasa
+Domain controller
+Active directory
+Fajkezelo szerepkorok hozzaadasa
+Tovabb
+Elso marad
+Ip cimet megkell az abran kell megnezni 
+A windows szervert nezzuk
+Lehet at kell irni
+Mielott az active directory telepitjuk elotte ipt kell beallitani
+Lekell megsezni az ablakot miutan at irtuk
+Ip cim at irasa; es dns is ahogy a feladat irja
+Szuro: nem irunk semmit
+Amit telepitunk tartomanyi szolgaltatasok + elore bepiljuk dhcp kiszolgalot es a dms kiszolgalot es amikor kesobb bemegyunk az mmcbe akkor mar ott lesz.
+Miutan megtortent a telepites
+A zaszlonal es ra megyunk a kekre
+Uj erdo local.lan
+Jelszo megadasa akkor sajat jelszo 
+Dns
+Globalis pipa
+Netbios tartomany nev LOCAL
+TELEPITES
+Ujrafog indulni
+Ugyan az a jelszo lehet mind2onel hogy ne legyen keveredes 
+
+2.szemelyre szabott kezeloablak mmc
+Windows r  beirjuk mmc
+Hozza adjuk dnst dchpt es csoport hazirend kezelest
+Fajl es beepulo modul hozzadasa
+De hat nincs dhcp
+Ea akkor visszamegyunk fajkezelo iranyotpuptvavyok jobb fent kezeles szerepkorok hozzaadasa tovab tovabb 
+Es bepipaljuk hogy dhcp kiszolgalo
+Mmc windows+ r be fajl es bepulo modulok hozza adasa  es csoport hazirend kezeleset is
+Okezzuk.
+Es mentes virtualis gep asztalra
+
+
+3. Cimtarszolgaltatas objektumainak kezelese ds.
+A) feladat szervezeti egyegek ou letrehozasa.
+Iranyito pultnal maradunk es jobb fent eszkozok
+Active directory felhasznalo es szamitogepek elso klikk
+Local.com ra kattintunk
+2 ember fej mellet a szervezeti egysegre kattintunk
+Direktor beirjuk a feladat alapjan a nevet
+Az also ki kell pipalni veletlen torles elleni vedelmet.
+Es direktoron belul csinalok meg 2 szervezeti egyseget a feladat alapjan.
+
+
+Es majd ebben amit csinaltunk az ember fej fent uj csoportot letehozasara megyunk
+Csoportnev:it ami afeladatban megvan adva
+Globalis es biztonsagi marad.
+
+
+
+
+
+B ) feladat felhasznalok es csoportok kezelese 
+A feladat alpjan ra megyunk a szervezeti egysegre majd kis ember fej uj felhasznalo letrehozasa
+Feladat alapjan beirjuk a nevet adatokat stb
+Ugyan az a jelszo lehet az amit hasznaltuk SimonyiRG2025
+Es kiszedjuk a pipat a kovetkezo belepeskor meg kell valtoztatnirol
+Bepipaljuk hogy  ajelszo sose jar le 
+
+Es most a szervezeti egysegekben hozunk letre csoportokat a feladat alapjan 
+
+Csoportokba bekell rakni a felhasznalokat
+Ra megyunk felhasznalora jobb hozza adas csoporthoz
+Es az ures mezobe irom be a csoport nevet
+Majd minden elozoleg letrhozott cdoport hozza adunk a megosztasokba
+Ahova keri az osstes csoportot arra dupla klikk es a kovetkezo tagja es ott a hozza adas beirjul a csport neveit majd alkalmazzuk. 
+
+4. PowerShell parancsok
+Rendszergazdakent beillesztem a kodokat vagy beirom csak az egyiket elsot fokent eloszor az 
+A parancsban kotjel name nel arra irom at ami a feladatban
+Majd at kell irjnam start rangenel beirom azt az ipt ami a feladatban van majd az edrangnel is es amaszkot is ami megvan adva.------------------------
+A masodik kodban a computer nevet beirom,dns szerver ipjet ami a szerver ipje amitnmegadtam azbelejen.
+Dns domain local.lan vagy ami a feladatban van.
+Routernel pedi a lan ipjet irom at vagy be.
+Az egesz kod a settol kezdodik a router ipjig tart igy kell beirjam. 
+
+add es utana set. Es a legelso parancsokat irom be. 
+Es masodik lepes
+Dns szerver ip cimet ami nekem az ip cimem a szerveren !!!!! Fontos computer nevnel a kodban azt a gepet kell beirjam a gep nevet 
+Igy nezem meg a geo nevet:
+Gephaz re szer nevjegy es alul at irom ami van az abran es unra in
+A gep nevet megkekl nezzem ha azt latom hogy desktop valami akkor at kell nevezzem gep nev es ip cim beallitas az active directory elott meg.!!!!!!!!!!!!! Arra ami a feladatbab a neve.
+
+
+
+5. Munka allomas beallitasa azza a kliens gépé.
+Ugyanugy mint a szerveren
+Kliensen csinalom a tartomanyba rakast
+Kliensen csinalom ugye gephaz
+-Rendszer-nevjegy legorgetek specialis rendszsrbeallitasok
+Szamitogepnevre kattintunk
+Majd a modositas gombra megyunk itt lesz az hogy at megyunk a tartomanyba es beirjuk a feladatbab megadott
+Tartomany never local.lan es utana keri a gep Rendszergazda felhasznalonev ;jelszavat amit megadnak az elejen azt hasznaljam mindenhol es itt is.
+Udvozoljuk a tartomanyba ezt irja itr fog szamitani az hogy mit irtam be a power shellbe.
+
+
+6 .csoport hazirend telepitese gpo ha mind2ot azaz a linuxot es widnowst megkell csinalni at ugroma gpot esnmegyek a linuxra
+- csoporr hazirend objektumit letehozni nevvel es alkalmazza egy szervezeti egysegre
+Keresobe csoport hazirend kezelese
+Majd ra megyubk lenyitjuk a megadott tartomanyhazirendet es az alhazirendbe jobb klikk es csoporthazirend obhektum leteehozasa megadjuk a nevet
+Majda letehozott csoporthazirend obhektumban jobb klikl es szerkesztes
+Szamitogep komfnal hazirendeket lenyitjuk majd windows beallitasai majd biztonsagi beallitasok majd fiokhazirend majd jelszohazirend majd jelszo mininalis elettertama. Ra megyunk es pipa es 0 nap. 
+
+Csoport hazirend kezelesre megyunk tovabb maradunk annal az objektumn amit csinaltunk hitelesitett felhasznalokat toroljuk
+Majd hozzadas kovetkezik amit megadott hogy meddig terjesszuk csak ki nevet beirjuk.
+Es kesz 
+
+Telepitesnel vissza a csoport hazirendbe
+Legalja felhasznalo konfiguracio
+Hazirendek majd szoftver beallitasok szoftver telepitese
+Ures mezo jobb klikk uj csomag es ott kikell valasztani a telepitot amit en ugye valoszinu leszedtem
+-kotelezo kell vissza kell lepni es ujra be akkor jelenik meg
+Bal klikk 2szer majd kozpontintelepites 
+Az alkalmazas telepitese bejelentkezeskor pipa
+Majd cmd szerveren es beirom gpupdate /force megvan es utana 
+Beirom ezt kliensen is yes es ujra majd feltelepul a program 
+
+Elotte ezt megkell csinalni
+Helyi lemez c uj mappa telepito pl
+Jobb gomb a mappara tulajdonsagok majd megosztas
+Specialis megosztas maola megisztas pipa majd engedelyekre mind 3 pipa es alkalmaz
+Halozat jobb klikk halozati csatlakoztato megadasa mappahoz a szamitogep  nevet kell irjam \\ per es gep neve vagy szerver ip cime
+Es utana  befejezes kesz
+
+
+
+
+
+Legelso dolog ip at irasa es gep at nevezese gep at nevezese akkor ha kell es ha kell akkor utana ujra inditas. Gepen lesz alapbol jelszo amit majd megadnak.!!
