@@ -1,2 +1,95 @@
+1. Apt update elejen nem.rootot irunk hanem ami oda lesz irva
+2.hozzon letre  konyvtarakat
+mkdir jozsef
+mkdir mentett
+cd jozsef
+Belul egy forras konyvtarat.--
+Mkdir forras
+cd forras 
+Touch banan.txt
+Cd
+Mkdir torolt
+Cd torolt
+Touch test.txt
+Cd
+rm -r torolt
+Ls -l es !torolte jok vagyunk! 
 
-sfdf
+Banan keszitsen egy masolatot a forras konyvtarba
+Cd forras
+Cp banan.txt banan.txt.old +letrejott a masolat+
+Az eredetit at nevezzuk-
+Mv banan.txt banan.txt.elozo
+Mv banan.txt.old banan.txt 
+
+3. Felhasznalok es csoportok letehozasa.
+Cd vel kimegyunk a fo konyvtarba
+Addgroup  (munkasok)
+Addgroup (vezetok)
+Adduser text (useradd)
+Es beirjuk a jelszot
+Teljes nev valami
+Szobaszam
+Egyeb
+Addgroup (fonokok)
+Addgroup (dolgozok)
+Useradd -m -g fonokok -G 
+Usermod -g fonokok test(-------(
+Usermod -aG dolgozok test
+Mkdir /home/test
+Chown test:fonokok /home/test
+Chmod 755 /home/test jogosultsagok
+Id test 
+
+4. -b) Fajlhozzaferesek
+Adduser proba
+Jelszo
+Teljes nev
+Szobaszam 
+egyeb
+Chown proba /home/Jozsef/forras/banan.txt
+Chown proba /home/jozsef/forras/banan.txt 
+(Rootban voltunk azert nemjo)
+Felhasznaloba kell belepni
+Chown proba /root de itt a felhasznalot kell beirni aminmeglesz adva/jozsef /forras/banan.txt vissza fele pedig cd .. al egyel megyunk visszabb.
+Cd jozsef ez azbeleres nemkell perjel mert azt hiszi hogyba gyokernkoynvtarbol akarunk belepni
+Cd forras 
+Kep 
+
+Cd mentett
+Groupadd muvezetok
+Chown :muvezetok mentett
+Chmod 770 mentett
+5. Nfs szerver telepitese 
+Apt install nfs-kernel-server
+Mc -srv-nfs-.. 
+Chmod 777 /srv/nfs
+Mc etc cnrl+ s idmap.conf f4
+Es at irjuk
+Etc exporta f4 beirjuk a kep alapjan
+F2+ f10el jovunk ki
+Systemctl restart nfs-server
+Exportfs -a azzal frissiti azvallomanyt 
+
+6.Dhcp szerver
+Telepitjuk
+Isc-dhcp-server
+Ip a (mi az interfacem.)
+!!!!Mc etc 
+(Hosts)
+(Resolv.conf)
+!!Interfacen megnezni es at nezni!!
+!!!!Etc Dhcpd.conf!!! 
+
+Range es meddig
+
+
+Etc/default/isc dhcp server
+Es ellenorizzuk restartoljuk
+Sytemmctl Restart isc-dhcp-srver 
+Systemctl status isc-dhcp-server
+Ez a 2 kell nekunk.
+
+
+
+---Mc vel jon fel a kek ablak--
