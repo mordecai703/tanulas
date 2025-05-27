@@ -1,0 +1,18 @@
+1.Portok felkapcsolasa
+2 Eszkozok elnevezese
+3.Routerben jelszo allitas
+enable password ...
+  service password-encryption
+  line console 0
+  password ...
+  do wr
+
+4. switchen jelszo es vlanok elnevezese
+jelszok ugyanugy 
+vlan 10
+  name ...
+  vlan 20
+name...
+  vlan 30
+name ...
+  exit
