@@ -10,9 +10,128 @@ enable password ...
 4. switchen jelszo es vlanok elnevezese
 jelszok ugyanugy 
 vlan 10
-  name ...
+  name ADMIN
   vlan 20
-name...
+name FAST
   vlan 30
-name ...
+name SLOW
   exit
+
+4.vissza arouterbe
+interface gigabitEthernet 0/0.10
+encapsulation dot1Q 10
+no sh
+ do wr
+exit
+ipv6 unicast-routing
+
+interface gigabitEthernet 0/0.20
+encapsulation dot1Q 20
+no sh
+do wr
+exit
+
+interface gigabitEthernet 0/0.30
+encapsulation dot1Q 30
+no sh 
+do wr
+exit
+
+gigabitEthernet 0/0.10
+ipv6 address 2001:2023::10:1/64
+ipv6 address FE80::10:1 LINK-local
+
+interface gigabitEthernet 0/0.10
+no sh
+exit
+interface gigabitEthernet 0/0.20
+ip address 172.20.0.1 255.255.192.0
+no sh
+do wr
+exit
+interface gigabitEthernet 0/0.30
+ip address 172.30.0.1 255.255.192.0
+no sh
+do wr
+exit
+
+vlan database
+vlan 10 name ADMIN
+vlan 20 name FAST
+vlan 30 name SLOW
+exit
+do wr
+
+5. vissza a switchbe 156-S-be
+interface range fasatEthernet 0/1-9
+switchport mode access vlan 20
+no sh
+do wr
+exit
+
+interface range fastEthernet 0/10-19
+switchport mode acces vlan 30
+no sh
+do wr
+exit
+
+interface range fastEthernet 0/1-2
+switchport mode trunk
+switchport mode trunk allowed vlan 10,20,30
+switchport trunk native vlan 1
+no sh
+do wr
+exit
+
+
+6. vissza routerbe stevio-R-be
+interface gigabitEthernet 0/0.20
+standby version 2
+standby ip 172.20.0.3
+standby ? ne mfontos
+standby priority 120
+no sh
+do wr
+exit
+
+configba
+ip route 0.0.0.0 0.0.0. serial 0/0/0
+do wr
+
+router ospf 20
+network 172.20.0.0 0.0.63.255 area 0
+network 172.30.0.0 0.0.63.255 area 0
+network 10.3.0.0 0.0.255 area area 0
+do wr
+
+passive-interface gigabitEthernet 0/0.10
+passive-interface gigabitEthernet 0/0.20
+do wr
+default-information originate
+do wr
+
+interface gigabitEthernet 0/0.20
+ip nat inside exit
+interface gigabitEthernet 0/0.30
+ip nat inside
+interface gigabitEthernet 0/0.10
+ip nat inside
+exit
+interface serial 0/0/0
+ip nat outside
+interface serial 0/0/1
+ip nat outside
+do wr
+exit
+ip nat ? nem fontos
+ip nat inside source static 172.20.30.1 10.1.0.5
+acces-list 20 deny 172.20.30.1 0.0.63.255 
+do wr
+access.list permit host 172.20.0.0
+ip nat inside source list 20 interface serial 0/0/0 overload
+do wr
+
+
+
+
+
