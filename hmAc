@@ -128,11 +128,11 @@ interface serial 0/0/1
 ip nat outside
 do wr
 exit
-ip nat ? nem fontos
+(ip nat ? nem fontos)
 ip nat inside source static 172.20.30.1 10.1.0.5
 acces-list 20 deny 172.20.30.1 0.0.63.255 
 do wr
-access.list permit host 172.20.0.0
+access-list permit host 172.20.0.0
 ip nat inside source list 20 interface serial 0/0/0 overload
 do wr
 
